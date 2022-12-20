@@ -7,6 +7,7 @@ const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 export const GithubProvider = ({ children }) => {
+    // Create an initial state that takes the place of the useState hook
     const initialState = {
         users: [],
         user: {},
@@ -84,7 +85,7 @@ export const GithubProvider = ({ children }) => {
     // Clear user from state
     const clearUsers = () => dispatch({ type: 'CLEAR_USERS' });
 
-    // Get and display initial users (for testing)
+    // Get and display initial users (for testing only)
     // const fetchUsers = async () => {
     //     setLoading();
     //     const response = await fetch(`${GITHUB_URL}/users`, {
